@@ -6,8 +6,8 @@ export default function configureStore(initialState) {
   const composeEnhancers =
     window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; //add support for reux dev tools
   return createStore(
-    initialState,
     rootReducer,
+    initialState,
     composeEnhancers(applyMiddleware(reduxImmutableStateInvariant()))
   );
 }
