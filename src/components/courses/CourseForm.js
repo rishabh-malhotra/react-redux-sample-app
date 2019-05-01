@@ -6,11 +6,12 @@ import SelectInput from "../common/SelectInput";
 const CourseForm = ({
   course,
   authors,
+  errors = {},
   onSave,
   onChange,
   saving = false,
-  errors = {}
 }) => {
+  console.log(course)
   return (
     <form onSubmit={onSave}>
       <h2>{course.id ? "Edit" : "Add"} Course</h2>
